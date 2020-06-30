@@ -12,8 +12,8 @@ tipo VARCHAR(15))
 CREATE TABLE curso(
 codigo INT IDENTITY PRIMARY KEY,
 nome VARCHAR(50) NOT NULL,
-descricao VARCHAR(MAX),
-duracao VARCHAR(30),
+descricao VARCHAR(MAX) NOT NULL,
+duracao VARCHAR(30)NOT NULL ,
 situacao bit not null,
 usuario_dono VARCHAR(50)
 FOREIGN KEY (usuario_dono) REFERENCES usuario(usuario))
