@@ -24,3 +24,4 @@ INSERT INTO usuario VALUES
 ('Raj','Pedro','x@x.com','123','ADM')
 
 select * from usuario
+
