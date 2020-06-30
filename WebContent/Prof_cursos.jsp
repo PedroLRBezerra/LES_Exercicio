@@ -5,17 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Aqui o professor pode colocar postar o curso para avaliação</title>
+<title>Aqui o professor pode colocar postar o curso para avaliaï¿½ï¿½o</title>
 </head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-<div class="w3-panel w3-red w3-round-xlarge">
-         <center><h1><%
+
+ <%
   Usuario user = (Usuario)(request.getAttribute("user"));
 %>
-	</h1></center>
-     </div> 
+	
     <div class="w3-panel w3-red w3-round-xlarge">
          <center><h1>Adicione seu curso aqui</h1></center>
      </div> 
@@ -24,14 +23,19 @@
                 <label><h3>Nome do curso:</h3></label>
                 <input class="w3-input w3-border w3-white" name="Nome_curso" type="text"></p>
               <p>      
-                <label><h3>Descrição do curso</h3></label>          
-                <input class="w3-input w3-border w3-white" name="Dest_curso" type="text"></p>
+                <label><h3>Descriï¿½ï¿½o do curso</h3></label>          
+                <input class="w3-input w3-border w3-white" name="Desc_curso" type="text"></p>
               <p>      
-                <label><h3>Duração do curso</h3></label>          
+                <label><h3>Duraï¿½ï¿½o do curso</h3></label>          
                 <input class="w3-input w3-border w3-white" name="Dur_curso" type="text"></p>  
               <p>
-              	<input name="user" type="text" value="<%=user.getUsuario()%>" disabled="disabled"></p>
-              	
+              <div style="display: none;">
+              	<input name="useruser" type="text" value="<%=user.getUsuario()%>">
+              	<input name="username" type="text" value="<%=user.getNome()%>">
+              	<input name="useremail" type="text" value="<%=user.getEmail()%>">
+              	<input name="usersenha" type="text" value="<%=user.getSenha()%>">
+              	<input name="usertipo" type="text" value="<%=user.getTipo()%>">
+              	</div>
              <button  class="w3-btn w3-blue">Postar</button></p>
              
              </form>
