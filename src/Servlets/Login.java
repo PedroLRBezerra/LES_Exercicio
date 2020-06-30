@@ -60,10 +60,8 @@ public class Login extends HttpServlet{
 	private String getUrlporTipo(String s) {
 		String url="/LES_Exercicio/";
 		String [][] urlsTipo = {{"ADM","PROFESSOR","ALUNO"},
-								{"","","Cursos.jsp"}};
-		System.out.println(urlsTipo[0].length);
+								{"Cursos_ADM.jsp","Prof_cursos.jsp","Cursos.jsp"}};
 		for(int x=0;x<urlsTipo[0].length;x++) {
-			System.out.println(urlsTipo[0][x]);
 			if(urlsTipo[0][x].equals(s)) {
 				url+=urlsTipo[1][x];
 			}
