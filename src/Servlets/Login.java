@@ -40,7 +40,7 @@ public class Login extends HttpServlet{
 	//	String emaIl = req.getParameter("TXTEMAL");
 		String senha = req.getParameter("senha");
 		PrintWriter out = res.getWriter();
-		System.out.println("bc"+nome);
+		System.out.println("bcc"+nome);
 		Usuario user= new Usuario();
 		try {
 			user = consulta_Login(nome, senha);
@@ -50,8 +50,25 @@ public class Login extends HttpServlet{
 		}
 		if (user.getNome() != null) { 
 			out.println("<h1>Usuario autenticado</h1>");
+			System.out.println(user.getTipo());
+			res.sendRedirect(getUrlporTipo(user.getTipo()));
 		} else {
 			out.println("<h1>Usuario inexistente</h1>");
 		}
+	}
+	
+	private String getUrlporTipo(String s) {
+		String url="/LES_Exercicio/";
+		String [][] urlsTipo = {{"ADM","PROFESSOR","ALUNO"},
+								{"","","Cursos.jsp"}};
+		System.out.println(urlsTipo[0].length);
+		for(int x=0;x<urlsTipo[0].length;x++) {
+			System.out.println(urlsTipo[0][x]);
+			if(urlsTipo[0][x].equals(s)) {
+				url+=urlsTipo[1][x];
+			}
+		}
+		
+		return url;
 	}
 }
