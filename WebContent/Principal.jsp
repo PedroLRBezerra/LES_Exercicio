@@ -22,12 +22,12 @@
 		  </form>
 		  
 		 <br>
-		  <form action="Login_professor.jsp">
+		  <form action="Login.jsp">
 			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Professor</button>
 		   </form>
 		   
 		 <br>
-		   <form action="Login_ADM.jsp">
+		   <form action="Login.jsp">
 			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Adiministrador</button>	
 		   </form> </center>	
 		   
