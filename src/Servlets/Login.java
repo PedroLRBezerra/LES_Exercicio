@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -51,14 +53,24 @@ public class Login extends HttpServlet{
 		if (user.getNome() != null) { 
 			out.println("<h1>Usuario autenticado</h1>");
 			System.out.println(user.getTipo());
-			res.sendRedirect(getUrlporTipo(user.getTipo()));
+			req.setAttribute("user",user);
+			RequestDispatcher dispatcher =  getServletContext().getRequestDispatcher(getUrlporTipo(user.getTipo()));
+			try {
+				dispatcher.forward(req, res);
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} else {
 			out.println("<h1>Usuario inexistente</h1>");
 		}
 	}
 	
 	private String getUrlporTipo(String s) {
-		String url="/LES_Exercicio/";
+		String url="/";
 		String [][] urlsTipo = {{"ADM","PROFESSOR","ALUNO"},
 								{"Cursos_ADM.jsp","Prof_cursos.jsp","Cursos.jsp"}};
 		for(int x=0;x<urlsTipo[0].length;x++) {
