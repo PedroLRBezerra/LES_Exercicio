@@ -27,7 +27,7 @@
 		</form>
 		  
 		 <br>
-		  <form action="Login.jsp">
+		  <form action="Cadastrar.jsp">
 			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Cadastrar</button>
 		   </form></center>
 	<!--  	   
