@@ -30,7 +30,8 @@
                 <label><h3>Duração do curso</h3></label>          
                 <input class="w3-input w3-border w3-white" name="Dur_curso" type="text"></p>  
               <p>
-              	<input name="user" type="text" value="<%=user.getUsuario()%>" disabled="disabled">
+              	<input name="user" type="text" value="<%=user.getUsuario()%>" disabled="disabled"></p>
+              	
              <button  class="w3-btn w3-blue">Postar</button></p>
              
              </form>
