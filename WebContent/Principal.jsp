@@ -4,32 +4,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Identificação</title>
+<title>E-leaning</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
          <div class="w3-panel w3-blue w3-round-xlarge">
-         <center><h1>Olá seja bem-vindo a E-leaning</h1></center>
-         
-         <br>
-         <center><h2>Quem é você?</h2></center>
-         </div> 
+         <center><h1>Seja bem-vindo a E-leaning</h1></center>
+          </div> 
+      <p><rigth><h3>Sobre nós :</h3></rigth></p>
+      
+      <p> Criada em 2020 a E-Learning é uma plataforma de estudos virtual que disponibiliza cursos de diversas áreas do conhecimento
+          tais como Administração, Contabilidade e Finanças, Informática, Desenvolvimento Pessoal e Profissional entre outras. </p>   
+          
+     <p> Nosso objetivo é facilitar o aprendizado  por meio de materiais criativos e do oferecimento de percursos formativos didaticamente organizados,
+         capazes de gerar engajamento por meio do uso de recursos multimídia e exercícios interativos.</p>     
               
-         <br>
-          <center> <form action="Login.jsp">
-			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Aluno</button>
-		  </form>
+      <br>
+        <center><form action="Login.jsp">
+			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Login</button>
+		   </form> 
+		</form>
 		  
 		 <br>
 		  <form action="Login.jsp">
-			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Professor</button>
-		   </form>
-		   
+			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Cadastrar</button>
+		   </form></center>
+	<!--  	   
 		 <br>
 		   <form action="Login.jsp">
 			<button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Adiministrador</button>	
-		   </form> </center>	
+		   </form> </center>  -->
+		
+		   
+		   
 		   
   </body>
 </html>
