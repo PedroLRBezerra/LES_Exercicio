@@ -2,9 +2,13 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 import entity.Curso;
+import entity.Usuario;
 
 public class CursosDAOImp implements CursosDAO {
 	
@@ -33,6 +37,81 @@ public class CursosDAOImp implements CursosDAO {
 			e.printStackTrace();
 		}
 
+	}
+
+	@Override
+	public List<Curso> buscarCursosNAOAprovados() {
+		List<Curso> lista = new LinkedList<Curso>();
+		try {
+			String sql = "SELECT * FROM curso WHERE situacao LIKE ?  ";
+			PreparedStatement stmt = c.prepareStatement(sql);
+			stmt.setInt(1, 0);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) { 
+				Curso curso = new Curso();
+				curso.setCodigo(rs.getInt("codigo"));
+				curso.setDecricao(rs.getString("descricao"));
+				curso.setDuracao(rs.getString("duracao"));
+				curso.setSituacao(rs.getBoolean("situacao"));
+				curso.setNome(rs.getString("nome"));
+				curso.setUsuario_dono(rs.getString("usuario_dono"));
+				lista.add(curso);
+			}
+			c.close();
+		} catch (SQLException e) {
+			System.out.println("Deu Ruim");
+		}
+		return lista;
+	}
+
+	@Override
+	public List<Curso> buscarCursosAprovados() {
+		List<Curso> lista = new LinkedList<Curso>();
+		try {
+			String sql = "SELECT * FROM curso WHERE situacao LIKE ?  ";
+			PreparedStatement stmt = c.prepareStatement(sql);
+			stmt.setInt(1, 1);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) { 
+				Curso curso = new Curso();
+				curso.setCodigo(rs.getInt("codigo"));
+				curso.setDecricao(rs.getString("descricao"));
+				curso.setDuracao(rs.getString("duracao"));
+				curso.setSituacao(rs.getBoolean("situacao"));
+				curso.setNome(rs.getString("nome"));
+				curso.setUsuario_dono(rs.getString("usuario_dono"));
+				lista.add(curso);
+			}
+			c.close();
+		} catch (SQLException e) {
+			System.out.println("Deu Ruim");
+		}
+		return lista;
+	}
+
+	@Override
+	public List<Curso> buscarCursosDeProfessor(Usuario user) {
+		List<Curso> lista = new LinkedList<Curso>();
+		try {
+			String sql = "SELECT * FROM curso WHERE usuario_dono LIKE ?  ";
+			PreparedStatement stmt = c.prepareStatement(sql);
+			stmt.setString(1, user.getUsuario());
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) { 
+				Curso curso = new Curso();
+				curso.setCodigo(rs.getInt("codigo"));
+				curso.setDecricao(rs.getString("descricao"));
+				curso.setDuracao(rs.getString("duracao"));
+				curso.setSituacao(rs.getBoolean("situacao"));
+				curso.setNome(rs.getString("nome"));
+				curso.setUsuario_dono(rs.getString("usuario_dono"));
+				lista.add(curso);
+			}
+			c.close();
+		} catch (SQLException e) {
+			System.out.println("Deu Ruim");
+		}
+		return lista;
 	}
 
 }

@@ -7,11 +7,11 @@ import java.sql.SQLException;
 
 import entity.Usuario;
 
-public class LoginDAOImp implements LoginDAO {
+public class UsuarioDAOImp implements UsuarioDAO {
 	
 	private Connection c;
 	
-	public LoginDAOImp() throws ClassNotFoundException, SQLException {
+	public UsuarioDAOImp() throws ClassNotFoundException, SQLException {
 		IGenericDAO gDao = new GenericDAO();
 		c = gDao.getConnection(); 
 	}
@@ -40,6 +40,27 @@ public class LoginDAOImp implements LoginDAO {
 			e.printStackTrace();
 		}
 		return u;
+	}
+
+	@Override
+	public void cadastrarUsuario(Usuario user) {
+		try {
+			String sql = "INSERT INTO usuario (usuario,nome,email,senha,tipo) " +
+					"VALUES ( ?, ?, ?, ?, ?)";
+					PreparedStatement stmt = c.prepareStatement(sql);
+					stmt.setString(1, user.getUsuario());
+					stmt.setString(2, user.getNome());
+					stmt.setString(3, user.getEmail());
+					stmt.setString(4, user.getSenha());
+					stmt.setString(5, user.getTipo());
+					stmt.executeUpdate();
+					c.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
 	}
 
 }

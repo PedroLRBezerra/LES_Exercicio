@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.LoginDAO;
-import dao.LoginDAOImp;
+import dao.UsuarioDAO;
+import dao.UsuarioDAOImp;
 import entity.Usuario;
 
 
@@ -25,7 +25,7 @@ public class Login extends HttpServlet{
 	
 	public Usuario consulta_Login(String user,String Senha) throws ClassNotFoundException, SQLException {
 		System.out.println(user+"a");
-		LoginDAO lDao = new LoginDAOImp();
+		UsuarioDAO lDao = new UsuarioDAOImp();
 		return lDao.validarLogin(user, Senha);
 	}
 	
