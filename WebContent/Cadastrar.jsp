@@ -13,11 +13,11 @@
     <div class="w3-panel w3-blue w3-round-xlarge">
       <h1><center>Login na escola Virtual</h1></center>
    </div>     
-	 <form class="w3-container" action="/LES_Exercicio//Login"  method="post">
+	 <form class="w3-container" action="/LES_Exercicio//CadastrarUsuario"  method="post">
       
       <p>      
       <label class="w3-text-blue"><b>Nome:</b></label>
-      <input class="w3-input w3-border w3-white" name="usuario" type="text"></p>
+      <input class="w3-input w3-border w3-white" name="nome" type="text"></p>
        
        <p>      
       <label class="w3-text-blue"><b>Usuario</b></label>
@@ -25,18 +25,18 @@
        
        <p>      
       <label class="w3-text-blue"><b>Senha</b></label>
-      <input class="w3-input w3-border w3-white" name="usuario" type="text"></p>
+      <input class="w3-input w3-border w3-white" name="senha" type="text"></p>
        
        <p>      
       <label class="w3-text-blue"><b>Email</b></label>
-      <input class="w3-input w3-border w3-white" name="usuario" type="text"></p>    
+      <input class="w3-input w3-border w3-white" name="email" type="text"></p>    
       
       <p>
         <div class="form-group">
 			<label><H2>Tipo de usuario:</H2></label>
-			<select name="Tipo" class="form-control">
-				<option value="user">Aluno</option>
-				<option value="user">Professor</option>
+			<select name="tipo" class="form-control">
+				<option value="ALUNO">Aluno</option>
+				<option value="PROFESSOR">Professor</option>
 	     </select>
 	    </div> 			
       <p>

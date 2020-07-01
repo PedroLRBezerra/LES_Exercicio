@@ -10,4 +10,6 @@ public interface CursosDAO {
 	public List<Curso> buscarCursosNAOAprovados();
 	public List<Curso> buscarCursosAprovados();
 	public List<Curso> buscarCursosDeProfessor(Usuario user);
+	public void validarCurso(Curso curso);
+	public void removerCurso(Curso curso);
 }
