@@ -48,7 +48,7 @@
                 <input class="w3-input w3-border w3-white" name="Dur_curso" type="text"></p>  
               <p>      
                 <label><h3>Nome do proprietário</h3></label>          
-                <input class="w3-input w3-border w3-white" name="Dur_curso" type="text"></p>  
+                <input class="w3-input w3-border w3-white" name="Nom_dono" type="text"></p>  
              
              <button  class="w3-btn w3-blue">ADICIONAR</button>
              <button class="w3-btn w3-blue">RECUSAR </button>
