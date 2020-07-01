@@ -58,10 +58,6 @@
 				<option value="disponivel">Vue.js  </option>
 			</select>
 		</div>
-		   <div>
-			 	<label><h2>Descrição do curso</h2></label>  
-				
-			</div>
 			<br>
 			<p>
 			<button type="submit" class="w3-button w3-blue">Adicionar Curso</button></p>
