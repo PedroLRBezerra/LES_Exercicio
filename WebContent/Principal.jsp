@@ -12,7 +12,7 @@
          <div class="w3-panel w3-blue w3-round-xlarge">
          <center><h1>Seja bem-vindo a E-leaning</h1></center>
           </div> 
-      <p><rigth><h3>Sobre nós :</h3></rigth></p>
+      <p><center><h3>Sobre nós </h3></center></p>
       
       <p> Criada em 2020 a E-Learning é uma plataforma de estudos virtual que disponibiliza cursos de diversas áreas do conhecimento
           tais como Administração, Contabilidade e Finanças, Informática, Desenvolvimento Pessoal e Profissional entre outras. </p>   
