@@ -114,4 +114,37 @@ public class CursosDAOImp implements CursosDAO {
 		return lista;
 	}
 
+	@Override
+	public void validarCurso(Curso curso) {
+		try {
+			String sql = "UPDATE curso SET situacao = ?"
+					+ "WHERE codigo = ?"
+					+ "VALUES (?,?)";
+					PreparedStatement ps = c.prepareStatement(sql);
+					ps.setInt(1,1);
+					ps.setInt(2, curso.getCodigo());
+					ps.execute();
+					ps.close();
+					}
+			catch(SQLException e){
+				e.printStackTrace();
+				System.out.println("Deu Ruim");
+			}
+		
+	}
+
+	@Override
+	public void removerCurso(Curso curso) {
+		try {
+			String sql = "DELETE FROM curso WHERE codigo=?";
+			PreparedStatement stmt = c.prepareStatement(sql);
+			stmt.setInt(1, curso.getCodigo());
+			stmt.executeUpdate();
+			c.close();
+		} catch (SQLException e) {
+			System.out.println("Deu Ruim");
+		}
+		
+	}
+
 }
