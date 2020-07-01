@@ -6,6 +6,30 @@
      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <title>Adm dashboard</title>
+<style>
+#cursosADD {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cursosADD td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cursosADD tr:nth-child(even){background-color: #f2f2f2;}
+
+#cursosADD tr:hover {background-color: #ddd;}
+
+#cursosADD th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 <body>
      <div class="w3-panel w3-red w3-round-xlarge">
@@ -28,6 +52,25 @@
              
              <button  class="w3-btn w3-blue">ADICIONAR</button>
              <button class="w3-btn w3-blue">RECUSAR </button>
+          
+           <p>
+           <table class="w3-table-all" id ="cursosADD">
+		    <thead >
+						<tr>
+							<th>Nome do curso</th>
+							<th>Descrição</th>
+							<th>Duração</th>
+							<th>Nome do proprietário</th>
+						</tr>
+						 <tr>
+                           <td>Alfreds Futterkiste</td>
+                           <td>Maria Anders</td>
+                           <td>Germany</td>
+                           <td>Brazil</td>
+                         </tr>  
+					 <thead >			
+				</table></p>
+             
              </form>
              
 </body>
