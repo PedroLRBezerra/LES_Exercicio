@@ -45,22 +45,10 @@
 	     <center><h1>Cursos a validar </h1></center> 
 	    </div>
 	    
-	    <form class="w3-container" action="/LES_Exercicio//Login"  method="post">
-               <p>
-                <label><h3>Nome do curso:</h3></label>
-                <input class="w3-input w3-border w3-white" name="Nome_curso" type="text"></p>
-              <p>      
-                <label><h3>Descriï¿½ï¿½o do curso</h3></label>          
-                <input class="w3-input w3-border w3-white" name="Dest_curso" type="text"></p>
-              <p>      
-                <label><h3>Duraï¿½ï¿½o do curso</h3></label>          
-                <input class="w3-input w3-border w3-white" name="Dur_curso" type="text"></p>  
-              <p>      
-                <label><h3>Nome do proprietï¿½rio</h3></label>          
-                <input class="w3-input w3-border w3-white" name="Nom_dono" type="text"></p>  
-             
-             <button  class="w3-btn w3-blue">ADICIONAR</button>
-             <button class="w3-btn w3-blue">RECUSAR </button>
+	    <form class="w3-container" action="/LES_Exercicio//validar"  method="post">
+            
+          
+     
           
            <p>
            <table class="w3-table-all" id ="cursosADD">
@@ -68,9 +56,9 @@
 						<tr>
 							<th>Codigo do Curso</th>
 							<th>Nome do curso</th>
-							<th>Descriï¿½ï¿½o</th>
-							<th>Duraï¿½ï¿½o</th>
-							<th>Nome do proprietï¿½rio</th>
+							<th>Descrição</th>
+							<th>Duraçãoo</th>
+							<th>Nome do proprietario</th>
 						</tr>
 						 <%
 							for(int x=0;x<lista.size();x++){
