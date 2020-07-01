@@ -118,8 +118,7 @@ public class CursosDAOImp implements CursosDAO {
 	public void validarCurso(Curso curso) {
 		try {
 			String sql = "UPDATE curso SET situacao = ?"
-					+ "WHERE codigo = ?"
-					+ "VALUES (?,?)";
+					+ "WHERE codigo = ?";
 					PreparedStatement ps = c.prepareStatement(sql);
 					ps.setInt(1,1);
 					ps.setInt(2, curso.getCodigo());
