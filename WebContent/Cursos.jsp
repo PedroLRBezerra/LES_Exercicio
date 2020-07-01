@@ -5,6 +5,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cursos Disponiveis</title>
+<style>
+#cursos {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cursos td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cursos tr:nth-child(even){background-color: #f2f2f2;}
+
+#cursos tr:hover {background-color: #ddd;}
+
+#cursos th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,11 +63,13 @@
 				
 			</div>
 			<br>
-			<button type="submit" class="w3-button w3-purple">Adicionar Curso</button>
-		  <table class="w3-table-all">
+			<p>
+			<button type="submit" class="w3-button w3-blue">Adicionar Curso</button></p>
+			
+		  <table class="w3-table-all" id="cursos">
 		    <thead >
 						<tr>
-							<th>Nome</th>
+							<th>Nome do curso</th>
 							<th>Descrição</th>
 							<th>Duração</th>
 						</tr>

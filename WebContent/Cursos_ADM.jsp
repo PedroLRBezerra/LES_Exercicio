@@ -28,6 +28,18 @@
              
              <button  class="w3-btn w3-blue">ADICIONAR</button>
              <button class="w3-btn w3-blue">RECUSAR </button>
+           
+           <table class="w3-table-all">
+		    <thead >
+						<tr>
+							<th>Nome do curso</th>
+							<th>Descrição</th>
+							<th>Duração</th>
+							<th>Nome do proprietário</th>
+						</tr>
+					 <thead >			
+				</table>
+             
              </form>
              
 </body>
